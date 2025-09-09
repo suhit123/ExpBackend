@@ -10,6 +10,9 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
+app.get('/data', (req, res) => {
+    res.json({ message: 'This is some data from the server.' });
+});
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
